@@ -1,2 +1,0 @@
-class PosteController < ApplicationController
-end
