@@ -19,15 +19,27 @@
 .has-bg-img {
   background: url('hearthstonetitle.png')
   center center;background-size:cover;
-}
-
-.hearthstone-body{
-  background: url('hearthstonebackground1.jpg')
-  center center; background-size:cover;
+  opacity: 1;
 }
 
 body{
   background: url('cardbackground.jpg')
   center center;
-  background-size:cover
+  background-size:cover;
+
+}
+
+.navbar-end {
+  background-color: #FFFFFF;
+  background-image: none;
+}
+
+.content {
+  background-color: #FFFFFF;
+  background-image:none;
+}
+
+.comments {
+  background-color: #FFFFFF;
+  background-image:none;
 }
