@@ -32,13 +32,28 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'devise', '~> 4.4', '>= 4.4.1'
+gem 'gravatar_image_tag', '~> 1.2'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'rolify', '~> 5.2'
+gem 'cancancan', '~> 2.1', '>= 2.1.3'
+gem 'friendly_id', '~> 5.2', '>= 5.2.3'
+gem 'redcarpet', '~> 3.4'
+gem 'coderay', '~> 1.1', '>= 1.1.2'
+
+# To make the website a better UI. (Bulma CSS)
+gem 'bulma-rails', '~> 0.7.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+# Call 'byebug' anywhere in the code to stop execution and get a debugger console
+gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+# Forms made easy!
+gem 'simple_form', '~> 4.0'
 end
 
 group :development do
@@ -48,6 +63,14 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Guard is a command line tool to easily handle events on file system modifications.
+  gem 'guard', '~> 2.14', '>= 2.14.2'
+  # Make errors better looking
+  gem 'better_errors', '~> 2.4'
+
+  # Guard::LiveReload automatically reloads your browser when 'view' files are modified.
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
+
 end
 
 group :test do
