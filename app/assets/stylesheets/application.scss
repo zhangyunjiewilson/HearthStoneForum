@@ -25,7 +25,8 @@
 body{
   background: url('cardbackground.jpg')
   center center;
-  background-size:cover;
+  background-size: contain;
+  background-repeat: repeat-y;
 
 }
 
