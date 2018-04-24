@@ -14,5 +14,20 @@
  *= require_self
  */
 
- @import "bulma";
- .has-bg-img { background: url('hearthstonetitle.png')center center; background-size:cover; }
+@import "bulma";
+
+.has-bg-img {
+  background: url('hearthstonetitle.png')
+  center center;background-size:cover;
+}
+
+.hearthstone-body{
+  background: url('hearthstonebackground1.jpg')
+  center center; background-size:cover;
+}
+
+body{
+  background: url('cardbackground.jpg')
+  center center;
+  background-size:cover
+}
