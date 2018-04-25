@@ -1,7 +1,7 @@
 <div class="columns">
   <div class="column is-8">
-    <h1 class="title is-2 has-text-grey discussion-title"><%= @discussion.title %></h1>
-    <h3 class="subtitle is-5 has-text-grey-lighter">by <%= @discussion.user.username %> in <%= link_to @discussion.channel.channel, @discussion.channel %></h3>
+    <h1 class="title is-2 has-text-grey-darker discussion-title"><%= @discussion.title %></h1>
+    <h3 class="subtitle is-5 has-text-grey-darker-lighter">by <%= @discussion.user.username %> in <%= link_to @discussion.channel.channel, @discussion.channel %></h3>
     <div class="level">
       <div class="level-left"></div>
       <div class="level-right">
@@ -15,15 +15,15 @@
     </div>
     <div class="content"><%= markdown(@discussion.content) %></div>
 
-    <h2 class="subtitle is-5 has-text-grey"><%= @discussion.replies.count %> Replies</h2>
+    <h2 class="subtitle is-5 has-text-grey-darker"><%= @discussion.replies.count %> Replies</h2>
 
     <div id="discussion-replies">
       <%= render @discussion.replies %>
     </div>
- 
+
     <hr />
 
-    <h3 class="subtitle is-3 has-text-grey">Leave a reply</h3>
+    <h3 class="subtitle is-3 has-text-grey-darker">Leave a reply</h3>
     <% if user_signed_in? %>
        <%= render 'replies/form' %>
     <% else %>
@@ -36,4 +36,3 @@
   <%= render 'sidebar' %>
 
 </div>
-
