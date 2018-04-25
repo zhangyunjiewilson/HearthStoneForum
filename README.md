@@ -1,35 +1,24 @@
-### Rails Project - Hearthstone Forum
+# README
 
-__Title:__ Rails Decal Final Project - Hearthstone Forum
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-__Team Members__: Yunjie Zhang, Ruijie Zhou
+Things you may want to cover:
 
-__Demo Link__:
+* Ruby version
 
-__Idea__: A Ruby web application that allow users to create account, and log in to write blogs about anything related to HearthStone.
+* System dependencies
 
-__Models and Description__:
+* Configuration
 
-User
+* Database creation
 
-* has username, password, and customized decks
+* Database initialization
 
-Card
+* How to run the test suite
 
-* has the class it belongs to, attack, health, and a picture that associates with the card
+* Services (job queues, cache servers, search engines, etc.)
 
-Deck
+* Deployment instructions
 
-* A collection that has exactly 30 cards
-
-__Features__:
-
-* Users can log in
-* User can browse the collections of cards
-* User can search for specific cards of specific criteria
-* Users can create their own customized decks from the collections of cards
-
-__Divison of Labor__:
-
-* Yunjie: Make users
-* Ruijie:  Make cards and decks
+* ...

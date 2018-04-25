@@ -1,157 +1,20 @@
-Started GET "/" for 127.0.0.1 at 2018-04-24 15:18:04 -0700
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /Users/zhangyunjie/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /Users/zhangyunjie/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (4.0ms)
-Completed 200 OK in 25ms (Views: 12.3ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for 127.0.0.1 at 2018-04-24 15:27:41 -0700
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /Users/zhangyunjie/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /Users/zhangyunjie/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
-Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for 127.0.0.1 at 2018-04-24 15:41:13 -0700
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (1.3ms)
-Completed 500 Internal Server Error in 3485ms (ActiveRecord: 0.0ms)
-
-
-
-NoMethodError - undefined method `user_signed_in?' for #<#<Class:0x007ff7b2c499b8>:0x007ff7b2c04408>:
-  app/views/layouts/application.html.erb:39:in `_app_views_layouts_application_html_erb___4360557728803291868_70350903088660'
-
-Started POST "/__better_errors/44221d22c2ed1ddc/variables" for 127.0.0.1 at 2018-04-24 15:41:17 -0700
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
-  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
-  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
-  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
-  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
-Migrating to DeviseCreateUsers (20180424224233)
-  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
-  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
-  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
-  ↳ db/migrate/20180424224233_devise_create_users.rb:5
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
-  ↳ db/migrate/20180424224233_devise_create_users.rb:39
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
-  ↳ db/migrate/20180424224233_devise_create_users.rb:40
-  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180424224233"]]
-  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
-  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
-  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
-  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
-  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
-  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
-  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-04-24 22:42:54.946022"], ["updated_at", "2018-04-24 22:42:54.946022"]]
-  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
-  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
-  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
-Started GET "/" for 127.0.0.1 at 2018-04-24 15:44:55 -0700
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/better_errors-2.4.0/lib/better_errors/middleware.rb:84
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (0.6ms)
-Completed 500 Internal Server Error in 716ms (ActiveRecord: 0.0ms)
-
-
-
-NameError - undefined local variable or method `new_discussion_path' for #<#<Class:0x007fb06c5cf2f0>:0x007fb06c5cc758>
-Did you mean?  new_session_path:
-  app/views/layouts/application.html.erb:57:in `_app_views_layouts_application_html_erb__338779093007753255_70197858838340'
-
-Started POST "/__better_errors/c318784a350a6e28/variables" for 127.0.0.1 at 2018-04-24 15:44:56 -0700
-Started GET "/" for 127.0.0.1 at 2018-04-24 15:44:59 -0700
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (0.4ms)
-Completed 500 Internal Server Error in 671ms (ActiveRecord: 0.0ms)
-
-
-
-NameError - undefined local variable or method `new_discussion_path' for #<#<Class:0x007fb06c5cf2f0>:0x007fb072aaf1e8>
-Did you mean?  new_session_path:
-  app/views/layouts/application.html.erb:57:in `_app_views_layouts_application_html_erb__338779093007753255_70197901825600'
-
-Started POST "/__better_errors/0bbf9959f20553cf/variables" for 127.0.0.1 at 2018-04-24 15:45:00 -0700
-Started GET "/" for 127.0.0.1 at 2018-04-24 15:52:37 -0700
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (0.4ms)
-Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for 127.0.0.1 at 2018-04-24 15:52:42 -0700
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (0.4ms)
-Completed 200 OK in 32ms (Views: 28.8ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for 127.0.0.1 at 2018-04-24 22:23:16 -0700
-  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/better_errors-2.4.0/lib/better_errors/middleware.rb:84
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (1.0ms)
-Completed 200 OK in 349ms (Views: 337.1ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for 127.0.0.1 at 2018-04-24 22:28:56 -0700
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (0.4ms)
-Completed 200 OK in 1644ms (Views: 1638.1ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for 127.0.0.1 at 2018-04-24 22:30:11 -0700
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (0.8ms)
-Completed 200 OK in 1498ms (Views: 1495.9ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for 127.0.0.1 at 2018-04-24 22:32:39 -0700
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (0.3ms)
-Completed 200 OK in 1493ms (Views: 1489.9ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for 127.0.0.1 at 2018-04-24 22:32:44 -0700
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (0.4ms)
-Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for 127.0.0.1 at 2018-04-24 22:32:56 -0700
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (0.3ms)
-Completed 200 OK in 1531ms (Views: 1528.7ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for 127.0.0.1 at 2018-04-24 22:36:40 -0700
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (0.5ms)
-Completed 200 OK in 1528ms (Views: 1521.2ms | ActiveRecord: 0.0ms)
-
-
+Started GET "/" for 127.0.0.1 at 2018-04-25 08:11:55 -0700
   
-ActionController::RoutingError (No route matches [GET] "/assets/hearthstonetitle.jpg"):
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
   
-actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.0) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
 web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
@@ -163,12 +26,7 @@ activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagge
 activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
 activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
 railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
-activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
-activesupport (5.2.0) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
-activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
-activesupport (5.2.0) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
 actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
 actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
 rack (2.0.5) lib/rack/method_override.rb:22:in `call'
@@ -183,30 +41,503 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started GET "/" for 127.0.0.1 at 2018-04-24 22:36:52 -0700
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (0.3ms)
-Completed 200 OK in 1498ms (Views: 1491.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to DeviseCreateUsers (20180425023140)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180425023140_devise_create_users.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20180425023140_devise_create_users.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20180425023140_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180425023140"]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to AddUsernameToUsers (20180425024248)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "username" varchar[0m
+  ↳ db/migrate/20180425024248_add_username_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180425024248"]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateDiscussions (20180425025012)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "discussions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180425025012_create_discussions.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180425025012"]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to AddUserIdToDiscussions (20180425030403)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "discussions" ADD "user_id" integer[0m
+  ↳ db/migrate/20180425030403_add_user_id_to_discussions.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180425030403"]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateReplies (20180425030517)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "replies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "reply" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180425030517_create_replies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180425030517"]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateChannels (20180425030801)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "channels" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "channel" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180425030801_create_channels.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180425030801"]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to AddDiscussionIdToReplies (20180425030945)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "replies" ADD "discussion_id" integer[0m
+  ↳ db/migrate/20180425030945_add_discussion_id_to_replies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180425030945"]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to AddUserIdToReplies (20180425031004)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "replies" ADD "user_id" integer[0m
+  ↳ db/migrate/20180425031004_add_user_id_to_replies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180425031004"]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to AddChannelIdToDiscussions (20180425031142)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "discussions" ADD "channel_id" integer[0m
+  ↳ db/migrate/20180425031142_add_channel_id_to_discussions.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180425031142"]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to AddDiscussionIdToChannels (20180425031237)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "channels" ADD "discussion_id" integer[0m
+  ↳ db/migrate/20180425031237_add_discussion_id_to_channels.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180425031237"]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to RolifyCreateRoles (20180425084756)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "roles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "resource_type" varchar, "resource_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180425084756_rolify_create_roles.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_roles_on_resource_type_and_resource_id" ON "roles" ("resource_type", "resource_id")[0m
+  ↳ db/migrate/20180425084756_rolify_create_roles.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "users_roles" ("user_id" integer, "role_id" integer)[0m
+  ↳ db/migrate/20180425084756_rolify_create_roles.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_users_roles_on_user_id" ON "users_roles" ("user_id")[0m
+  ↳ db/migrate/20180425084756_rolify_create_roles.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_users_roles_on_role_id" ON "users_roles" ("role_id")[0m
+  ↳ db/migrate/20180425084756_rolify_create_roles.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_roles_on_name" ON "roles" ("name")[0m
+  ↳ db/migrate/20180425084756_rolify_create_roles.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_roles_on_name_and_resource_type_and_resource_id" ON "roles" ("name", "resource_type", "resource_id")[0m
+  ↳ db/migrate/20180425084756_rolify_create_roles.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_users_roles_on_user_id_and_role_id" ON "users_roles" ("user_id", "role_id")[0m
+  ↳ db/migrate/20180425084756_rolify_create_roles.rb:17
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180425084756"]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-04-25 15:12:10.088979"], ["updated_at", "2018-04-25 15:12:10.088979"]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Started GET "/" for 127.0.0.1 at 2018-04-25 08:16:41 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/web-console-3.6.1/lib/web_console/middleware.rb:135
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.2ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:4
+  Rendered shared/_discussions.html.erb (3.1ms)
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:5
+  Rendered discussions/_sidebar.html.erb (6.3ms)
+  Rendered discussions/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 3135ms (Views: 3093.7ms | ActiveRecord: 0.8ms)
 
 
-Started GET "/" for 127.0.0.1 at 2018-04-24 22:39:48 -0700
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (0.3ms)
-Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+Started GET "/discussions/new" for 127.0.0.1 at 2018-04-25 08:16:48 -0700
+Processing by DiscussionsController#new as HTML
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms)
 
 
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-25 08:16:48 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (108.0ms)
+Completed 200 OK in 170ms (Views: 154.0ms | ActiveRecord: 0.7ms)
 
-Sass::SyntaxError - Invalid CSS after "  center center": expected "{", was ";":
-  app/assets/stylesheets/application.scss:22:in `'
-  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___3797016382636366581_70345343233320'
 
-Started POST "/__better_errors/ba465fd4fece698f/variables" for 127.0.0.1 at 2018-04-24 22:39:48 -0700
-Started GET "/" for 127.0.0.1 at 2018-04-24 22:39:56 -0700
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (0.4ms)
-Completed 200 OK in 1561ms (Views: 1558.2ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-25 08:16:52 -0700
+Processing by RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 77ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-04-25 08:17:20 -0700
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ws9SEVkS3CII9NasZt/MmBddQ81249afZUJISK27oM9APzAiTCyiqeui03uzr04K3PiU1V+Rm/L7O6Hcq9f9gg==", "user"=>{"username"=>"test", "email"=>"test@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/controllers/devise/registrations_controller.rb:19
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/controllers/devise/registrations_controller.rb:19
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?, ?)[0m  [["email", "test@gmail.com"], ["encrypted_password", "$2a$11$Z77gnCwyIpTJBzNSni1Mm.bc021Baf0rPg33FgyB4Vr7ERB9CgZtq"], ["created_at", "2018-04-25 15:17:20.582315"], ["updated_at", "2018-04-25 15:17:20.582315"], ["username", "test"]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/controllers/devise/registrations_controller.rb:19
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/controllers/devise/registrations_controller.rb:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/devise-4.4.3/lib/devise/models/trackable.rb:40
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-04-25 15:17:20.588519"], ["last_sign_in_at", "2018-04-25 15:17:20.588519"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-04-25 15:17:20.589184"], ["id", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/devise-4.4.3/lib/devise/models/trackable.rb:40
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/devise-4.4.3/lib/devise/models/trackable.rb:40
+Redirected to http://localhost:3000/discussions/new
+Completed 302 Found in 174ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/discussions/new" for 127.0.0.1 at 2018-04-25 08:17:20 -0700
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:21
+  Rendered discussions/_form.html.erb (12.1ms)
+  Rendered discussions/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 107ms (Views: 65.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/discussions" for 127.0.0.1 at 2018-04-25 08:17:28 -0700
+Processing by DiscussionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IhLiLlviAnk+vRHvK3KmCe96FoVOyoJd+r8tDcDsYVTnKZNbH7Td/S1NXhHWVe5rvcXn66OfT2OeGY04ctXP8w==", "discussion"=>{"title"=>"aaaa", "content"=>"this is a nice deck", "channel_id"=>""}, "commit"=>"Create Discussion"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/discussions_controller.rb:35
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/discussions_controller.rb:35
+  Rendering discussions/new.html.erb within layouts/application
+  Rendered discussions/_form.html.erb (11.4ms)
+  Rendered discussions/new.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    18:     <label class="label">Channel</label>
+    19:     <div class="control has-icons-left">
+    20:       <span class="select">
+    21:         <%= f.input_field :channel_id, collection:@channels.map { |c| [c.channel, c.id] }, prompt: "Select Channel" %>
+    22:       </span>
+    23:       <span class="icon is-small is-left">
+    24:         <i class="fa fa-tag"></i>
+  
+app/views/discussions/_form.html.erb:21:in `block in _app_views_discussions__form_html_erb__650388751160871396_70188726399800'
+app/views/discussions/_form.html.erb:2:in `_app_views_discussions__form_html_erb__650388751160871396_70188726399800'
+app/views/discussions/new.html.erb:3:in `_app_views_discussions_new_html_erb__816968501474503141_70188726526000'
+app/controllers/discussions_controller.rb:39:in `block (2 levels) in create'
+app/controllers/discussions_controller.rb:34:in `create'
+Started POST "/discussions" for 127.0.0.1 at 2018-04-25 08:17:42 -0700
+Processing by DiscussionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IhLiLlviAnk+vRHvK3KmCe96FoVOyoJd+r8tDcDsYVTnKZNbH7Td/S1NXhHWVe5rvcXn66OfT2OeGY04ctXP8w==", "discussion"=>{"title"=>"aaaa", "content"=>"this is a nice deck", "channel_id"=>""}, "commit"=>"Create Discussion"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/discussions_controller.rb:35
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/discussions_controller.rb:35
+  Rendering discussions/new.html.erb within layouts/application
+  Rendered discussions/_form.html.erb (9.1ms)
+  Rendered discussions/new.html.erb within layouts/application (11.9ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    18:     <label class="label">Channel</label>
+    19:     <div class="control has-icons-left">
+    20:       <span class="select">
+    21:         <%= f.input_field :channel_id, collection:@channels.map { |c| [c.channel, c.id] }, prompt: "Select Channel" %>
+    22:       </span>
+    23:       <span class="icon is-small is-left">
+    24:         <i class="fa fa-tag"></i>
+  
+app/views/discussions/_form.html.erb:21:in `block in _app_views_discussions__form_html_erb__650388751160871396_70188747702380'
+app/views/discussions/_form.html.erb:2:in `_app_views_discussions__form_html_erb__650388751160871396_70188747702380'
+app/views/discussions/new.html.erb:3:in `_app_views_discussions_new_html_erb__816968501474503141_70188747739160'
+app/controllers/discussions_controller.rb:39:in `block (2 levels) in create'
+app/controllers/discussions_controller.rb:34:in `create'
+Started GET "/discussions" for 127.0.0.1 at 2018-04-25 08:17:48 -0700
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.2ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:4
+  Rendered shared/_discussions.html.erb (2.0ms)
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mRole Load (0.2ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rolify-5.2.0/lib/rolify/role.rb:40
+  Rendered discussions/_sidebar.html.erb (31.2ms)
+  Rendered discussions/index.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 77ms (Views: 72.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/discussions/new" for 127.0.0.1 at 2018-04-25 08:17:59 -0700
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mChannel Load (0.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:21
+  Rendered discussions/_form.html.erb (8.5ms)
+  Rendered discussions/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 50ms (Views: 43.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/discussions" for 127.0.0.1 at 2018-04-25 08:18:04 -0700
+Processing by DiscussionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jf3eln1Y94qJcqnXfJM/oNmW5nqwuvCIGJd4XiCqSjZJXFHgi5kYZoKva15D32VFWUUo64wpqN9GSoUyVIHzdg==", "discussion"=>{"title"=>"a", "content"=>"adsf", "channel_id"=>""}, "commit"=>"Create Discussion"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/discussions_controller.rb:35
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/discussions_controller.rb:35
+  Rendering discussions/new.html.erb within layouts/application
+  Rendered discussions/_form.html.erb (9.6ms)
+  Rendered discussions/new.html.erb within layouts/application (12.3ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    18:     <label class="label">Channel</label>
+    19:     <div class="control has-icons-left">
+    20:       <span class="select">
+    21:         <%= f.input_field :channel_id, collection:@channels.map { |c| [c.channel, c.id] }, prompt: "Select Channel" %>
+    22:       </span>
+    23:       <span class="icon is-small is-left">
+    24:         <i class="fa fa-tag"></i>
+  
+app/views/discussions/_form.html.erb:21:in `block in _app_views_discussions__form_html_erb__650388751160871396_70188754274020'
+app/views/discussions/_form.html.erb:2:in `_app_views_discussions__form_html_erb__650388751160871396_70188754274020'
+app/views/discussions/new.html.erb:3:in `_app_views_discussions_new_html_erb__816968501474503141_70188695155440'
+app/controllers/discussions_controller.rb:39:in `block (2 levels) in create'
+app/controllers/discussions_controller.rb:34:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRole Load (0.9ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."name" = ? AND "roles"."resource_type" IS NULL AND "roles"."resource_id" IS NULL ORDER BY "roles"."id" ASC LIMIT ?[0m  [["name", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRole Create (1.5ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "admin"], ["created_at", "2018-04-25 22:11:16.912036"], ["updated_at", "2018-04-25 22:11:16.912036"]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRole Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND "roles"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "roles"."id" FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mRole Load (0.2ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = ?[0m  [["id", 1]]
+  [1m[36mRole Load (0.2ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser::HABTM_Roles Create (1.4ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES (?, ?)[0m  [["user_id", 1], ["role_id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-04-25 15:11:37 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/web-console-3.6.1/lib/web_console/middleware.rb:135
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.3ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:4
+  Rendered shared/_discussions.html.erb (6.6ms)
+  [1m[36mChannel Load (0.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:5
+  Rendered discussions/_sidebar.html.erb (7.5ms)
+  Rendered discussions/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 638ms (Views: 561.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-25 15:11:40 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (85.5ms)
+Completed 200 OK in 141ms (Views: 122.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-25 15:11:48 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bg+LyzJ1r/vBlDH+ziD5W9g+t5gEdiFcC7ZV5XAgJ+4ohguZX7ZWF4wRE8IiDn187/VcWA/T73bGeDcc/ry80w==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/devise-4.4.3/lib/devise/models/rememberable.rb:53
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", "2018-04-25 22:11:48.391636"], ["updated_at", "2018-04-25 22:11:48.392722"], ["id", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/devise-4.4.3/lib/devise/models/rememberable.rb:53
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/devise-4.4.3/lib/devise/models/rememberable.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/devise-4.4.3/lib/devise/models/trackable.rb:40
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 2], ["current_sign_in_at", "2018-04-25 22:11:48.399570"], ["updated_at", "2018-04-25 22:11:48.403546"], ["id", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/devise-4.4.3/lib/devise/models/trackable.rb:40
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/devise-4.4.3/lib/devise/models/trackable.rb:40
+Redirected to http://localhost:3000/
+Completed 302 Found in 178ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-25 15:11:48 -0700
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.2ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:4
+  Rendered shared/_discussions.html.erb (1.5ms)
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mRole Load (0.1ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rolify-5.2.0/lib/rolify/role.rb:40
+  Rendered discussions/_sidebar.html.erb (21.3ms)
+  Rendered discussions/index.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 81ms (Views: 76.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/channels/new" for 127.0.0.1 at 2018-04-25 15:11:50 -0700
+Processing by ChannelsController#new as HTML
+  Rendering channels/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mRole Load (0.5ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rolify-5.2.0/lib/rolify/role.rb:40
+  Rendered channels/_form.html.erb (10.9ms)
+  Rendered channels/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 55ms (Views: 45.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/channels" for 127.0.0.1 at 2018-04-25 15:11:53 -0700
+Processing by ChannelsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4XdCYtx6BN/2HZXnb1NK3wvrpxMZK2KPyVsVlF3MXuM67V6ClLlLPbGAwd6Cdq4KNe1JKFvkffUCqN7oAwhljQ==", "channel"=>{"channel"=>"mage"}, "commit"=>"Create Channel"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/channels_controller.rb:34
+  [1m[36mChannel Create (0.5ms)[0m  [1m[32mINSERT INTO "channels" ("channel", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["channel", "mage"], ["created_at", "2018-04-25 22:11:53.210940"], ["updated_at", "2018-04-25 22:11:53.210940"]]
+  ↳ app/controllers/channels_controller.rb:34
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/channels_controller.rb:34
+Redirected to http://localhost:3000/channels/1
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/channels/1" for 127.0.0.1 at 2018-04-25 15:11:53 -0700
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT  "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:71
+  Rendering channels/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rolify-5.2.0/lib/rolify/role.rb:40
+  [1m[36mDiscussion Load (0.2ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE (channel_id = 1)[0m
+  ↳ app/views/shared/_discussions.html.erb:4
+  Rendered shared/_discussions.html.erb (1.9ms)
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/discussions/_sidebar.html.erb:5
+  [1m[36mCACHE Role Load (0.0ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rolify-5.2.0/lib/rolify/role.rb:40
+  Rendered discussions/_sidebar.html.erb (2.8ms)
+  Rendered channels/show.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 57ms (Views: 49.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/discussions/new" for 127.0.0.1 at 2018-04-25 15:11:55 -0700
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mChannel Load (0.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:21
+  Rendered discussions/_form.html.erb (13.4ms)
+  Rendered discussions/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 72ms (Views: 52.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/discussions" for 127.0.0.1 at 2018-04-25 15:12:39 -0700
+Processing by DiscussionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AVd/kmxupo14kev/mYEgQpZxlvgev4VtOrr67Y7Qc0hzdoJWUwz0r1RdLbAB4PDSPek3y6wetZF0/UTr7sbbgw==", "discussion"=>{"title"=>"test", "content"=>"this is a test discussion post\r\n\r\n\r\n```python\r\nprint(\"hello world\")\r\n```", "channel_id"=>"1"}, "commit"=>"Create Discussion"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/discussions_controller.rb:35
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT  "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/discussions_controller.rb:35
+  [1m[36mDiscussion Create (1.2ms)[0m  [1m[32mINSERT INTO "discussions" ("title", "content", "created_at", "updated_at", "user_id", "channel_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "test"], ["content", "this is a test discussion post\r\n\r\n\r\n```python\r\nprint(\"hello world\")\r\n```"], ["created_at", "2018-04-25 22:12:39.762909"], ["updated_at", "2018-04-25 22:12:39.762909"], ["user_id", 1], ["channel_id", 1]]
+  ↳ app/controllers/discussions_controller.rb:35
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/discussions_controller.rb:35
+Redirected to http://localhost:3000/discussions/1
+Completed 302 Found in 16ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/discussions/1" for 127.0.0.1 at 2018-04-25 15:12:39 -0700
+Processing by DiscussionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDiscussion Load (0.2ms)[0m  [1m[34mSELECT  "discussions".* FROM "discussions" WHERE "discussions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/discussions_controller.rb:72
+  Rendering discussions/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/discussions/show.html.erb:4
+  [1m[36mChannel Load (0.1ms)[0m  [1m[34mSELECT  "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/discussions/show.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "replies" WHERE "replies"."discussion_id" = ?[0m  [["discussion_id", 1]]
+  ↳ app/views/discussions/show.html.erb:18
+  [1m[36mReply Load (0.2ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = ?[0m  [["discussion_id", 1]]
+  ↳ app/views/discussions/show.html.erb:21
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered replies/_form.html.erb (9.0ms)
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:5
+  [1m[36mRole Load (0.2ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rolify-5.2.0/lib/rolify/role.rb:40
+  Rendered discussions/_sidebar.html.erb (2.9ms)
+  Rendered discussions/show.html.erb within layouts/application (89.4ms)
+Completed 200 OK in 131ms (Views: 123.8ms | ActiveRecord: 2.4ms)
 
 
