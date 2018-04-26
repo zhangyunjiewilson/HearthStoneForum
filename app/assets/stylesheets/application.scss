@@ -50,6 +50,11 @@ body{
   background: radial-gradient(rgba(255,255,255,2), rgba(255,255,255,0.65)); /* Standard syntax (must be last) */
 }
 
+.show_channel {
+  background: white; /* For browsers that do not support gradients */
+  background: radial-gradient(rgba(255,255,255,2), rgba(255,255,255,0.65)); /* Standard syntax (must be last) */
+}
+
 .index_channel {
   background: white; /* For browsers that do not support gradients */
   background: radial-gradient(rgba(255,255,255,2), rgba(255,255,255,0.65)); /* Standard syntax (must be last) */
