@@ -5240,3 +5240,111 @@ Processing by DiscussionsController#new as HTML
 Completed 200 OK in 1702ms (Views: 1697.0ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-25 18:09:11 -0700
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.2ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:7
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT  "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:7
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT  "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:16
+  Rendered shared/_discussions.html.erb (11.4ms)
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:5
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rolify-5.2.0/lib/rolify/role.rb:40
+  Rendered discussions/_sidebar.html.erb (4.6ms)
+  Rendered discussions/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 68ms (Views: 61.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/discussions/4" for 127.0.0.1 at 2018-04-25 18:09:13 -0700
+Processing by DiscussionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDiscussion Load (0.2ms)[0m  [1m[34mSELECT  "discussions".* FROM "discussions" WHERE "discussions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/discussions_controller.rb:72
+  Rendering discussions/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/discussions/show.html.erb:4
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT  "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/discussions/show.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "replies" WHERE "replies"."discussion_id" = ?[0m  [["discussion_id", 4]]
+  ↳ app/views/discussions/show.html.erb:18
+  [1m[36mReply Load (0.2ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = ?[0m  [["discussion_id", 4]]
+  ↳ app/views/discussions/show.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/replies/_reply.html.erb:5
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rolify-5.2.0/lib/rolify/role.rb:40
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/replies/_reply.html.erb:5
+  [1m[36mCACHE Role Load (0.0ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rolify-5.2.0/lib/rolify/role.rb:40
+  Rendered collection of replies/_reply.html.erb [2 times] (8.3ms)
+  Rendered replies/_form.html.erb (4.9ms)
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:5
+  [1m[36mCACHE Role Load (0.0ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/rolify-5.2.0/lib/rolify/role.rb:40
+  Rendered discussions/_sidebar.html.erb (2.6ms)
+  Rendered discussions/show.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 74ms (Views: 67.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/discussions/new" for 127.0.0.1 at 2018-04-25 18:09:56 -0700
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:21
+  Rendered discussions/_form.html.erb (10.5ms)
+  Rendered discussions/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 1959ms (Views: 1952.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/discussions/new" for 127.0.0.1 at 2018-04-25 18:09:58 -0700
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:21
+  Rendered discussions/_form.html.erb (10.5ms)
+  Rendered discussions/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 107ms (Views: 93.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/discussions/new" for 127.0.0.1 at 2018-04-25 18:10:09 -0700
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:21
+  Rendered discussions/_form.html.erb (8.2ms)
+  Rendered discussions/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 1795ms (Views: 1789.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/discussions/new" for 127.0.0.1 at 2018-04-25 18:10:17 -0700
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/zhangyunjie/.rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:21
+  Rendered discussions/_form.html.erb (9.8ms)
+  Rendered discussions/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 96ms (Views: 91.3ms | ActiveRecord: 0.5ms)
+
+
