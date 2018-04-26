@@ -2,22 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body{
-  background: url('cardbackground.jpg')
-  center center;
-  // opacity: 0.2;
-}
-
 // .columns{
-//   background-color: #FFFFFF;
-//   background-image: none;
+//   background: white; /* For browsers that do not support gradients */
+//   background: radial-gradient(rgba(255,255,255,2), rgba(255,255,255,0.7)); /* Standard syntax (must be last) */
 // }
 
-.columns{
+// body.discussion{background-image: url(hearthstonebackground1.jpg);}
+.field{
   background: white; /* For browsers that do not support gradients */
   background: radial-gradient(rgba(255,255,255,2), rgba(255,255,255,0.7)); /* Standard syntax (must be last) */
 }
-// .field{
+
+// .title{
 //   background: white; /* For browsers that do not support gradients */
 //   background: radial-gradient(rgba(255,255,255,2), rgba(255,255,255,0.7)); /* Standard syntax (must be last) */
 // }
